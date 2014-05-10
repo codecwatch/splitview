@@ -31,3 +31,21 @@ pre {
     margin-left: initial !important;
     margin-right: initial !important;
 }
+
+#rightInfoDiv {
+    /*background-color: #159;*/
+    text-align: right;
+    display:inline-block !important;
+}
+
+#leftInfoDiv {
+    /*background-color: #951;*/
+    text-align: left;
+    display:inline-block !important;
+}
+
+#infoDiv {
+    border: 5px solid red;
+   /* display: inline-block;*/
+}
+

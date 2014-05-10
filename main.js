@@ -109,6 +109,8 @@ var selectB = document.getElementById("selectB");
 var splitSlider = document.getElementById("splitSlider");
 var videoUrl = document.getElementById("videoUrl");
 var viewLink = document.getElementById("viewLink");
+var leftInfoDiv = document.getElementById("leftInfoDiv");
+var rightInfoDiv = document.getElementById("rightInfoDiv");
 
 // Create the medias
 var leftImg = new Image();
@@ -161,11 +163,28 @@ function loadMedia(name, thisParam, thisImg, thisVid, otherVid) {
     }
 }
 
+function loadInfo(name, thisParam, genSelect, genInfoDiv) {
+    var filename = name.split('/').pop();
+
+    genInfoDiv.style.width = $(genSelect).width() + "px";
+
+    var infoDivContent = "";
+    $.each(videoList, function(i, v) {
+        if (v.path==name) {
+            infoDivContent = v.codec + " - " + v.bitrate + "</br>" + filename;
+        }
+    });
+
+    genInfoDiv.innerHTML = infoDivContent;
+}
+
 function loadLeftMedia(name) {
     loadMedia(name, "left", leftImg, leftVid, rightVid);
+    loadInfo(name, "left", selectA, leftInfoDiv);
 }
-function loadRightMedia(name, reload) {
+function loadRightMedia(name) {
     loadMedia(name, "right", rightImg, rightVid, leftVid);
+    loadInfo(name, "right", selectB, rightInfoDiv);
 }
 
 $(selectA).change(function() {
@@ -449,6 +468,7 @@ if (rightImg.src === "") {
 }
 $(leftImgDiv).append(leftImg);
 $(rightImgDiv).append(rightImg);
+
 
 $(selectA).val(uri.search(true).left);
 $(selectB).val(uri.search(true).right);
