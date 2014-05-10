@@ -111,6 +111,7 @@ var videoUrl = document.getElementById("videoUrl");
 var viewLink = document.getElementById("viewLink");
 var leftInfoDiv = document.getElementById("leftInfoDiv");
 var rightInfoDiv = document.getElementById("rightInfoDiv");
+var blindInfoDiv = document.getElementById("blindInfoDiv");
 
 // Create the medias
 var leftImg = new Image();
@@ -186,6 +187,25 @@ function loadRightMedia(name) {
     loadMedia(name, "right", rightImg, rightVid, leftVid);
     loadInfo(name, "right", selectB, rightInfoDiv);
 }
+
+$(blindInfoDiv).on('hidden.bs.collapse', function () {
+    var rand = Math.random();
+    console.log(rand);
+    if (rand < 0.5) {
+        //Not  invert video
+        leftVid.load();
+        rightVid.load();
+    } else {
+        //Invert video
+        loadLeftMedia($(selectB).val());
+        loadRightMedia($(selectA).val());
+        var selectA_tmp = $(selectA).val();
+        $(selectA).val($(selectB).val());
+        $(selectB).val(selectA_tmp);
+        leftVid.load();
+        rightVid.load();
+    }
+});
 
 $(selectA).change(function() {
     loadLeftMedia($(this).val());
