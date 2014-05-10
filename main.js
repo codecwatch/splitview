@@ -172,7 +172,7 @@ function loadInfo(name, genSelect, genInfoDiv) {
     var infoDivContent = "";
     $.each(videoList, function(i, v) {
         if (v.path==name) {
-            infoDivContent = v.codec + " - " + v.bitrate + "</br>" + filename;
+            infoDivContent = "<strong>" + v.codec + " - " + v.bitrate + "</br>" + filename + "</strong>";
         }
     });
 
