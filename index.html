@@ -50,27 +50,31 @@
           <li><a href="#" data-toggle="tab" data-css="./leftview.css">Left View</a></li>
           <li><a href="#" data-toggle="tab" data-css="./rightview.css">Right View</a></li>
         </ul>
-
+        <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#blindInfoDiv">
+            Blind Test
+        </button>
       </div>
-      <div id="infoDiv" class="unbounded-elem">
-        <div id="leftInfoDiv">
+      <div id="blindInfoDiv" class="collapse in unbounded-elem">
+        <div id="infoDiv" class="unbounded-elem">
+          <div id="leftInfoDiv">
           blabla
           <br>
           fewfew
           <!-- leftInfo will be here -->
-        </div>
-        <div id="rightInfoDiv">
+          </div>
+          <div id="rightInfoDiv">
           blabla
           <br>
           fewfew
           <!-- rightInfo will be here -->
+          </div>
         </div>
-      </div>
-      <div class="unbounded-elem">
-        <select id="selectA" class="mediaSelector">
-        </select>
-        <select id="selectB" class="mediaSelector">
-        </select>
+        <div class="unbounded-elem">
+          <select id="selectA" class="mediaSelector">
+          </select>
+          <select id="selectB" class="mediaSelector">
+          </select>
+        </div>
       </div>
       <div id="elems" class="unbounded-elem">
         <input type="range" id="splitSlider">

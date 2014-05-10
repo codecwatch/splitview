@@ -44,8 +44,15 @@ pre {
     display:inline-block !important;
 }
 
-#infoDiv {
-    border: 5px solid red;
-   /* display: inline-block;*/
+
+#blindInfoDiv {
+    border: 5px solid green;
 }
 
+.in {
+    display: inline-block !important;
+}
+
+.collapsing {
+    display: inline-block !important;
+}
