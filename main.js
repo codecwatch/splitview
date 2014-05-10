@@ -164,7 +164,7 @@ function loadMedia(name, thisParam, thisImg, thisVid, otherVid) {
     }
 }
 
-function loadInfo(name, thisParam, genSelect, genInfoDiv) {
+function loadInfo(name, genSelect, genInfoDiv) {
     var filename = name.split('/').pop();
 
     genInfoDiv.style.width = $(genSelect).width() + "px";
@@ -181,43 +181,42 @@ function loadInfo(name, thisParam, genSelect, genInfoDiv) {
 
 function loadLeftMedia(name) {
     loadMedia(name, "left", leftImg, leftVid, rightVid);
-    loadInfo(name, "left", selectA, leftInfoDiv);
+    loadInfo(name, selectA, leftInfoDiv);
 }
 function loadRightMedia(name) {
     loadMedia(name, "right", rightImg, rightVid, leftVid);
-    loadInfo(name, "right", selectB, rightInfoDiv);
+    loadInfo(name, selectB, rightInfoDiv);
 }
 
 $(blindInfoDiv).on('hidden.bs.collapse', function () {
     var rand = Math.random();
-    console.log(rand);
+
     if (rand < 0.5) {
-        //Not  invert video
-        leftVid.load();
-        rightVid.load();
-    } else {
-        //Invert video
+        // Invert video position
         loadLeftMedia($(selectB).val());
         loadRightMedia($(selectA).val());
         var selectA_tmp = $(selectA).val();
         $(selectA).val($(selectB).val());
         $(selectB).val(selectA_tmp);
-        leftVid.load();
-        rightVid.load();
     }
+
+    loadVid();
 });
 
 $(selectA).change(function() {
     loadLeftMedia($(this).val());
-    leftVid.load();
-    rightVid.load();
+    loadVid();
 });
 
 $(selectB).change(function() {
     loadRightMedia($(this).val());
+    loadVid();
+});
+
+function loadVid() {
     leftVid.load();
     rightVid.load();
-});
+}
 
 function onLeftLoaded(width, height) {
     splitSlider.style.top = height / 2 + "px";
