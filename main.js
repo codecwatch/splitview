@@ -10,7 +10,7 @@ jQuery.ajax({
         generateSplitView(data); //< --- a placer dans la success function
     },
     error: function (jqXHR, textStatus, errorThrown) {
-       // console.error(['API error json', jqXHR, textStatus, errorThrown]);
+        console.error(['API error json', jqXHR, textStatus, errorThrown]);
     }
 });
 
@@ -100,7 +100,7 @@ function generateSplitView(videoList) {
         var infoDivContent = "";
         $.each(videoList, function(i, v) {
             if (v.url==name) {
-                infoDivContent = "<strong>" + v.git_url + " - " + v.bitrate + "</br>" + filename + "</strong>";
+                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a> - " + v.bitrate + "</br>" + filename + "</strong>";
             }
         });
 
