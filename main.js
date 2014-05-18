@@ -2,87 +2,87 @@
 
 var videoList = [
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-112kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-112kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "112 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-112kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-112kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "112 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-179kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-179kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "179 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-179kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-179kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "179 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-290kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-290kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "290 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-290kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-290kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "290 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-399kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-399kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "399 kbps"
     },
     {
-        "sample": "big_buck_bunny_1000frames_720p24.y4m",
-        "path": "./samples/big_buck_bunny_1000frames_720p24.y4m-399kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "big_buck_bunny_1000frames_720p24.y4m",
+        "url": "./samples/big_buck_bunny_1000frames_720p24.y4m-399kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "399 kbps"
     },
     {
-        "sample": "sintel_trailer_2k_480p24.y4m",
-        "path": "./samples/sintel_trailer_2k_480p24.y4m-122kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "sintel_trailer_2k_480p24.y4m",
+        "url": "./samples/sintel_trailer_2k_480p24.y4m-122kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "122 kbps"
     },
     {
-        "sample": "sintel_trailer_2k_480p24.y4m",
-        "path": "./samples/sintel_trailer_2k_480p24.y4m-122kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "sintel_trailer_2k_480p24.y4m",
+        "url": "./samples/sintel_trailer_2k_480p24.y4m-122kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "122 kbps"
     },
     {
-        "sample": "sintel_trailer_2k_480p24.y4m",
-        "path": "./samples/sintel_trailer_2k_480p24.y4m-217kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "sintel_trailer_2k_480p24.y4m",
+        "url": "./samples/sintel_trailer_2k_480p24.y4m-217kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "217 kbps"
     },
     {
-        "sample": "sintel_trailer_2k_480p24.y4m",
-        "path": "./samples/sintel_trailer_2k_480p24.y4m-217kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "sintel_trailer_2k_480p24.y4m",
+        "url": "./samples/sintel_trailer_2k_480p24.y4m-217kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "217 kbps"
     },
     {
-        "sample": "sintel_trailer_2k_480p24.y4m",
-        "path": "./samples/sintel_trailer_2k_480p24.y4m-67kbps-libvpx-vp9-74074c9.webm",
-        "codec": "VP9",
+        "source": "sintel_trailer_2k_480p24.y4m",
+        "url": "./samples/sintel_trailer_2k_480p24.y4m-67kbps-libvpx-vp9-74074c9.webm",
+        "git_url": "VP9",
         "bitrate": "67 kbps"
     },
     {
-        "sample": "sintel_trailer_2k_480p24.y4m",
-        "path": "./samples/sintel_trailer_2k_480p24.y4m-67kbps-x264-956c8d8.mp4",
-        "codec": "H.264",
+        "source": "sintel_trailer_2k_480p24.y4m",
+        "url": "./samples/sintel_trailer_2k_480p24.y4m-67kbps-x264-956c8d8.mp4",
+        "git_url": "H.264",
         "bitrate": "67 kbps"
     }
 ];
@@ -171,8 +171,8 @@ function loadInfo(name, genSelect, genInfoDiv) {
 
     var infoDivContent = "";
     $.each(videoList, function(i, v) {
-        if (v.path==name) {
-            infoDivContent = "<strong>" + v.codec + " - " + v.bitrate + "</br>" + filename + "</strong>";
+        if (v.url==name) {
+            infoDivContent = "<strong>" + v.git_url + " - " + v.bitrate + "</br>" + filename + "</strong>";
         }
     });
 
@@ -443,10 +443,10 @@ if (params.time) {
 // Trying to load an unplayable video in a video tag will make it impossible
 // to subsequently load any other video in that tag, so we need to be careful
 function canPlay(media) {
-    if (media.codec == "H.264") {
+    if (media.git_url == "H.264") {
         return canPlayH264;
     }
-    if (media.codec == "VP9") {
+    if (media.git_url == "VP9") {
         return canPlayVP9;
     }
     return true;
@@ -454,8 +454,8 @@ function canPlay(media) {
 
 $.each(videoList, function(i, v) {
     if (canPlay(v)) {
-        var groups = $(".mediaSelector").optGroups(v.sample);
-        groups.append($("<option/>", {text: v.path}));
+        var groups = $(".mediaSelector").optGroups(v.source);
+        groups.append($("<option/>", {text: v.url}));
     }
 });
 // Load the medias
@@ -463,7 +463,7 @@ if (params.left) {
     addUrl(params.left);
     loadLeftMedia(params.left);
 } else if (canPlay(defaultParams.left)) {
-    loadLeftMedia(defaultParams.left.path);
+    loadLeftMedia(defaultParams.left.url);
 } else {
     leftImg.style.display = "none";
 }
@@ -471,7 +471,7 @@ if (params.right) {
     addUrl(params.right);
     loadRightMedia(params.right);
 } else if (canPlay(defaultParams.right)) {
-    loadRightMedia(defaultParams.right.path);
+    loadRightMedia(defaultParams.right.url);
 } else {
     rightImg.style.display = "none";
 }
