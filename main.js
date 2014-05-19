@@ -100,7 +100,7 @@ function generateSplitView(videoList) {
         var infoDivContent = "";
         $.each(videoList, function(i, v) {
             if (v.url==name) {
-                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a> - " + v.bitrate + "</br>" + filename + "</strong>";
+                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a> - " + v.bitrate + "kb/s</br>" + filename + "</strong>";
             }
         });
 
