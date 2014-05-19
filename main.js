@@ -383,7 +383,7 @@ function generateSplitView(videoList) {
     $.each(videoList, function(i, v) {
         if (canPlay(v)) {
             var groups = $(".mediaSelector").optGroups(v.source);
-            groups.append($("<option/>", {text: v.url}));
+            groups.append($("<option/>", {text: v.git_url + " " + v.bitrate + " kb/s Commit:" + v.commit, value: v.url}));
         }
     });
     // Load the medias
