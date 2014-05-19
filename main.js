@@ -3,7 +3,7 @@
 jQuery.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://duckyduck.gnugen.ch/webui/json?metric=PSNR",
+    url: "http://duckyduck.gnugen.ch/webui/json?metric=PSNR&git_url[]=https%3A%2F%2Fchromium.googlesource.com%2Fwebm%2Flibvpx&git_url[]=git%3A%2F%2Fgit.videolan.org%2Fx264.git",
     success: function (data, textStatus, jqXHR) {
         // La reponse du serveur est contenu dans data
         // On peut faire ce qu'on veut avec ici
