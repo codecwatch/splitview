@@ -43,6 +43,12 @@ function generateSplitView(videoList) {
     var rightInfoDiv = document.getElementById("rightInfoDiv");
     var blindInfoDiv = document.getElementById("blindInfoDiv");
 
+
+    var mapEncoder = new Object();
+    mapEncoder["https://github.com/videolan/x265"] = "x265";
+    mapEncoder["git://git.videolan.org/x264.git"] = "x264";
+    mapEncoder["https://chromium.googlesource.com/webm/libvpx"] = "libvpx";
+
     // Create the medias
     var leftImg = new Image();
     leftImg.id = "leftImg";
@@ -116,7 +122,7 @@ function generateSplitView(videoList) {
         var infoDivContent = "";
         $.each(videoList, function(i, v) {
             if (v.url==name) {
-                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a> - " + v.bitrate + " kb/s</strong>";
+                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a></br>" + v.bitrate + " kb/s</strong>";
             }
         });
 
@@ -399,7 +405,7 @@ function generateSplitView(videoList) {
     $.each(videoList, function(i, v) {
         if (canPlay(v)) {
             var groups = $(".mediaSelector").optGroups(v.source);
-            groups.append($("<option/>", {text: v.git_url + " - " + v.bitrate + " kb/s - " + formatDate(new Date(v.date*1000)) , value: v.url}));
+            groups.append($("<option/>", {text: mapEncoder[v.git_url] + " - " + v.bitrate + " kb/s - " + formatDate(new Date(v.date*1000)) , value: v.url}));
         }
     });
     // Load the medias
