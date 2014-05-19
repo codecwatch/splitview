@@ -116,7 +116,7 @@ function generateSplitView(videoList) {
         var infoDivContent = "";
         $.each(videoList, function(i, v) {
             if (v.url==name) {
-                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a> - " + v.bitrate + " kb/s</br>" + filename + "</br>" + formatDate(new Date(v.date*1000)) + "</strong>";
+                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a> - " + v.bitrate + " kb/s</strong>";
             }
         });
 
@@ -399,7 +399,7 @@ function generateSplitView(videoList) {
     $.each(videoList, function(i, v) {
         if (canPlay(v)) {
             var groups = $(".mediaSelector").optGroups(v.source);
-            groups.append($("<option/>", {text: v.git_url + " - " + v.bitrate + " kb/s", value: v.url}));
+            groups.append($("<option/>", {text: v.git_url + " - " + v.bitrate + " kb/s - " + formatDate(new Date(v.date*1000)) , value: v.url}));
         }
     });
     // Load the medias
