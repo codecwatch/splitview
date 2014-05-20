@@ -115,18 +115,28 @@ function generateSplitView(videoList) {
     };
 
     function loadInfo(name, genSelect, genInfoDiv) {
-        var filename = name.split('/').pop();
-
-        genInfoDiv.style.width = $(genSelect).width() + "px";
+        // var filename = name.split('/').pop();
 
         var infoDivContent = "";
         $.each(videoList, function(i, v) {
             if (v.url==name) {
-                infoDivContent = "<strong><a href=" + v.git_url + ">" + v.git_url + "</a></br>" + v.bitrate + " kb/s</strong>";
+                infoDivContent = "<strong>" + v.source + "</br>" + v.git_commit + "</strong>";
             }
         });
 
         genInfoDiv.innerHTML = infoDivContent;
+
+        /*var factor = 1.10;
+        if($(genSelect).width() > $(genInfoDiv).width()) {
+            genInfoDiv.style.width = $(genSelect).width() + "px";
+            genSelect.style.width = $(genSelect).width() + "px";
+        } else {
+            genInfoDiv.style.width = $(genInfoDiv).width() + "px";
+            genSelect.style.width = $(genInfoDiv).width() + "px";
+        }*/
+
+        genInfoDiv.style.width = "600px";
+        genSelect.style.width = "600px";
     }
 
     function loadLeftMedia(name) {
